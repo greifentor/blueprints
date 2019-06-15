@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog 
+		xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+				http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
+	<changeSet author="OlLie" id="version-001-001">
+		<createTable tableName="ENTRY">
+			<column name="ID" type="BIGINT">
+				<constraints nullable="false" primaryKey="true"/>
+			</column>
+			<column name="DESCRIPTION" type="VARCHAR(255)">
+				<constraints nullable="false" primaryKey="false" unique="false"/>
+			</column>
+			<column name="CHANGED_ON_DATE" type="DATE">
+				<constraints nullable="false" primaryKey="false" unique="false"/>
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="OlLie" id="version-001-002">
+		<insert tableName="ENTRY">
+			<column name="ID" valueNumeric="1"/>
+			<column name="DESCRIPTION" value="one"/>
+			<column name="CHANGED_ON_DATE" value="2019-06-01"/>
+		</insert>
+	</changeSet>
+	<changeSet author="OlLie" id="version-001-003">
+		<insert tableName="ENTRY">
+			<column name="ID" valueNumeric="2"/>
+			<column name="DESCRIPTION" value="two"/>
+			<column name="CHANGED_ON_DATE" value="2019-06-02"/>
+		</insert>
+		<insert tableName="ENTRY">
+			<column name="ID" valueNumeric="3"/>
+			<column name="DESCRIPTION" value="three"/>
+			<column name="CHANGED_ON_DATE" value="2019-06-03"/>
+		</insert>
+		<insert tableName="ENTRY">
+			<column name="ID" valueNumeric="4"/>
+			<column name="DESCRIPTION" value="four"/>
+			<column name="CHANGED_ON_DATE" value="2019-06-04"/>
+		</insert>
+		<insert tableName="ENTRY">
+			<column name="ID" valueNumeric="5"/>
+			<column name="DESCRIPTION" value="five"/>
+			<column name="CHANGED_ON_DATE" value="2019-06-05"/>
+		</insert>
+		<insert tableName="ENTRY">
+			<column name="ID" valueNumeric="6"/>
+			<column name="DESCRIPTION" value="six"/>
+			<column name="CHANGED_ON_DATE" value="2019-06-06"/>
+		</insert>
+		<insert tableName="ENTRY">
+			<column name="ID" valueNumeric="7"/>
+			<column name="DESCRIPTION" value="seven"/>
+			<column name="CHANGED_ON_DATE" value="2019-06-07"/>
+		</insert>
+		<insert tableName="ENTRY">
+			<column name="ID" valueNumeric="8"/>
+			<column name="DESCRIPTION" value="eight"/>
+			<column name="CHANGED_ON_DATE" value="2019-06-08"/>
+		</insert>
+		<insert tableName="ENTRY">
+			<column name="ID" valueNumeric="9"/>
+			<column name="DESCRIPTION" value="nine"/>
+			<column name="CHANGED_ON_DATE" value="2019-06-09"/>
+		</insert>
+		<insert tableName="ENTRY">
+			<column name="ID" valueNumeric="10"/>
+			<column name="DESCRIPTION" value="ten"/>
+			<column name="CHANGED_ON_DATE" value="2019-06-10"/>
+		</insert>
+	</changeSet>
+</databaseChangeLog> 
