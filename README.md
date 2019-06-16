@@ -1,2 +1,7 @@
-# blueprints
-A project with some blue prints to solve problems in a spring boot environment.
+# Blue Prints for Spring Boot
+Some blue prints for Spring Boot solutions.
+
+## Enviroment
+Java: `11`
+
+Maven: `3.5.4`

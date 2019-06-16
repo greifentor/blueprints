@@ -29,9 +29,11 @@ public class EntryPersistencePortImpl implements EntryPersistencePort {
 		List<EntrySO> l = new ArrayList<>(page.getSize());
 		page.forEach(em -> {
 			l.add(new EntrySO().setChangedOnDate(em.getChangedOnDate()).setDescription(em.getDescription())
-					.setId(em.getId()));
+					.setId(em.getId())); // (1)
 		});
 		return l;
 	}
 
 }
+
+//(1) A converter class should be used here :o)
