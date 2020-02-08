@@ -71,6 +71,7 @@
 	</build>
 
 	<modules>
+		<module>expandable-dtos</module>
 		<module>pageable-with-range</module>
 	</modules>
 

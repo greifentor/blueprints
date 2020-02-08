@@ -8,8 +8,10 @@ dynamically to an existing application, e. g. a JDBC driver.
 ## Example Project
 
 The example Project contains three components:
+
 * A main project with an application and a library module.
 * A additional module which uses the library and is bound dynamically to the main project.
+
 The additional module contains an implementation for an interface of the library. The application binds the additional
 module and runs the implemtation class.
 
