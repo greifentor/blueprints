@@ -2,13 +2,13 @@ package de.ollie.blueprints.service.impl;
 
 import java.util.Optional;
 
-import org.springframework.stereotype.Service;
+import javax.inject.Named;
 
 import de.ollie.blueprints.service.model.Book;
 import de.ollie.blueprints.service.model.Rack;
 import de.ollie.blueprints.service.model.Room;
 
-@Service
+@Named
 public class BookService {
 
 	public Optional<Book> findById(long id) {
