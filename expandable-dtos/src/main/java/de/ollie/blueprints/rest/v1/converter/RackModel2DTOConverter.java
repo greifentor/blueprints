@@ -6,25 +6,25 @@ import java.util.stream.Collectors;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import de.ollie.blueprints.rest.v1.dto.BookDTO;
-import de.ollie.blueprints.service.model.Book;
+import de.ollie.blueprints.rest.v1.dto.RackDTO;
+import de.ollie.blueprints.service.model.Rack;
 
 @Named
-public class BookModel2DTOConverter {
+public class RackModel2DTOConverter {
 
 	@Inject
-	private RackModel2DTOConverter rackModel2DTOConverter;
+	private RoomModel2DTOConverter roomModel2DTOConverter;
 
-	public BookDTO convert(Book model, List<String> toExpand) {
+	public RackDTO convert(Rack model, List<String> toExpand) {
 		if (model == null) {
 			return null;
 		}
-		return new BookDTO(//
+		return new RackDTO(//
 				model.getId(), //
-				model.getTitle(), //
-				(isToExpand("rack", toExpand)
-						? this.rackModel2DTOConverter.convert(model.getRack(), getToExpand("rack", toExpand))
-						: model.getRack().getId()) //
+				model.getName(), //
+				(isToExpand("room", toExpand)
+						? this.roomModel2DTOConverter.convert(model.getRoom(), getToExpand("room", toExpand))
+						: model.getRoom().getId()) //
 		);
 	}
 
@@ -32,7 +32,7 @@ public class BookModel2DTOConverter {
 		return toExpand //
 				.stream() //
 				.anyMatch(expand -> expand.toLowerCase().startsWith(attributeName.toLowerCase() + ".")
-						|| expand.equalsIgnoreCase(attributeName)) // ) //
+						|| expand.equalsIgnoreCase(attributeName)) //
 		;
 	}
 
