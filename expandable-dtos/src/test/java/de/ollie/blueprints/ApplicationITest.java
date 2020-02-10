@@ -29,8 +29,8 @@ public class ApplicationITest {
 				.andExpect(content().string("{\"id\":3," //
 						+ "\"title\":\"The Lord of the Rings\"," //
 						+ "\"rack\":{" //
-						+ "\"id\":2" //
-						+ "\"ref\":\"api/v1/racks/2\"" //
+						+ "\"id\":2," //
+						+ "\"link\":\"/api/v1/racks/2\"" //
 						+ "}" //
 						+ "}")) //
 		;
@@ -44,13 +44,14 @@ public class ApplicationITest {
 						+ "\"title\":\"The Lord of the Rings\"," //
 						+ "\"rack\":{" //
 						+ "\"id\":2," //
-						+ "\"ref\":\"api/v1/racks/2\"" //
+						+ "\"link\":\"/api/v1/racks/2\"," //
 						+ "\"expanded\":{" //
 						+ "\"id\":2," //
 						+ "\"name\":\"Rack A\"," //
 						+ "\"room\":{" //
-						+ "\"id\":1" //
-						+ "\"ref\":\"api/v1/rooms/1\"" //
+						+ "\"id\":1," //
+						+ "\"link\":\"/api/v1/rooms/1\"" //
+						+ "}" //
 						+ "}" //
 						+ "}" //
 						+ "}")) //
@@ -65,16 +66,18 @@ public class ApplicationITest {
 						+ "\"title\":\"The Lord of the Rings\"," //
 						+ "\"rack\":{" //
 						+ "\"id\":2," //
-						+ "\"ref\":\"api/v1/racks/2\"" //
+						+ "\"link\":\"/api/v1/racks/2\"," //
 						+ "\"expanded\":{" //
 						+ "\"id\":2," //
 						+ "\"name\":\"Rack A\"," //
 						+ "\"room\":{" //
-						+ "\"id\":1" //
-						+ "\"ref\":\"api/v1/rooms/1\"" //
+						+ "\"id\":1," //
+						+ "\"link\":\"/api/v1/rooms/1\"," //
 						+ "\"expanded\":{" //
 						+ "\"id\":1," //
-						+ "\"name\":\"Room 1\"," //
+						+ "\"name\":\"Room 1\"" //
+						+ "}" //
+						+ "}" //
 						+ "}" //
 						+ "}" //
 						+ "}")) //

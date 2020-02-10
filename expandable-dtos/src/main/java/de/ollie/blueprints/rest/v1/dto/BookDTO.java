@@ -11,6 +11,6 @@ public class BookDTO {
 
 	private Long id;
 	private String title;
-	private Object rack;
+	private ReferenceDTO<Long, RackDTO> rack;
 
 }
