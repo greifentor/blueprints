@@ -26,7 +26,13 @@ public class ApplicationITest {
 	public void urlForAnExistingBookCalled_ReturnsTheBooksData() throws Exception {
 		mockMvc.perform(get("/" + BookController.BOOKS_URL + "/{id}", 42L)) //
 				.andExpect(status().isOk()) //
-				.andExpect(content().string("{\"id\":3,\"title\":\"The Lord of the Rings\",\"rack\":2}")) //
+				.andExpect(content().string("{\"id\":3," //
+						+ "\"title\":\"The Lord of the Rings\"," //
+						+ "\"rack\":{" //
+						+ "\"id\":2" //
+						+ "\"ref\":\"api/v1/racks/2\"" //
+						+ "}" //
+						+ "}")) //
 		;
 	}
 
@@ -34,8 +40,20 @@ public class ApplicationITest {
 	public void urlForAnExistingBookWithRackExpandCalled_ReturnsTheBooksData() throws Exception {
 		mockMvc.perform(get("/" + BookController.BOOKS_URL + "/{id}?expand=rack", 42L)) //
 				.andExpect(status().isOk()) //
-				.andExpect(content().string(
-						"{\"id\":3,\"title\":\"The Lord of the Rings\",\"rack\":{\"id\":2,\"name\":\"Rack A\",\"room\":1}}")) //
+				.andExpect(content().string("{\"id\":3," //
+						+ "\"title\":\"The Lord of the Rings\"," //
+						+ "\"rack\":{" //
+						+ "\"id\":2," //
+						+ "\"ref\":\"api/v1/racks/2\"" //
+						+ "\"expanded\":{" //
+						+ "\"id\":2," //
+						+ "\"name\":\"Rack A\"," //
+						+ "\"room\":{" //
+						+ "\"id\":1" //
+						+ "\"ref\":\"api/v1/rooms/1\"" //
+						+ "}" //
+						+ "}" //
+						+ "}")) //
 		;
 	}
 
@@ -43,8 +61,23 @@ public class ApplicationITest {
 	public void urlForAnExistingBookWithRoomExpandCalled_ReturnsTheBooksData() throws Exception {
 		mockMvc.perform(get("/" + BookController.BOOKS_URL + "/{id}?expand=rack.room", 42L)) //
 				.andExpect(status().isOk()) //
-				.andExpect(content().string(
-						"{\"id\":3,\"title\":\"The Lord of the Rings\",\"rack\":{\"id\":2,\"name\":\"Rack A\",\"room\":{\"id\":1,\"name\":\"Room 1\"}}}")) //
+				.andExpect(content().string("{\"id\":3," //
+						+ "\"title\":\"The Lord of the Rings\"," //
+						+ "\"rack\":{" //
+						+ "\"id\":2," //
+						+ "\"ref\":\"api/v1/racks/2\"" //
+						+ "\"expanded\":{" //
+						+ "\"id\":2," //
+						+ "\"name\":\"Rack A\"," //
+						+ "\"room\":{" //
+						+ "\"id\":1" //
+						+ "\"ref\":\"api/v1/rooms/1\"" //
+						+ "\"expanded\":{" //
+						+ "\"id\":1," //
+						+ "\"name\":\"Room 1\"," //
+						+ "}" //
+						+ "}" //
+						+ "}")) //
 		;
 	}
 
