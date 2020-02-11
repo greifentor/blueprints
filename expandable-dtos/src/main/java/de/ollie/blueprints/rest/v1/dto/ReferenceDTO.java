@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Generated;
+import lombok.NoArgsConstructor;
 
 /**
  * A DTO for object references
@@ -18,6 +19,7 @@ import lombok.Generated;
 @Data
 @Generated
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@NoArgsConstructor
 public class ReferenceDTO<K, T> {
 
 	private K id;
