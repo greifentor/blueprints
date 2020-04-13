@@ -9,10 +9,11 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import de.ollie.blueprints.codereader.java.model.Annotation;
 import de.ollie.blueprints.codereader.java.model.ClassDeclaration;
-import de.ollie.blueprints.codereader.java.model.ClassOrInterfaceModifier;
 import de.ollie.blueprints.codereader.java.model.CompilationUnit;
 import de.ollie.blueprints.codereader.java.model.ImportDeclaration;
+import de.ollie.blueprints.codereader.java.model.Modifier;
 
 @ExtendWith(MockitoExtension.class)
 public class JavaCodeConverterTest {
@@ -66,8 +67,8 @@ public class JavaCodeConverterTest {
 		CompilationUnit expected = new CompilationUnit() //
 				.addTypeDeclarations( //
 						new ClassDeclaration() //
-								.addClassOrInterfaceModifiers( //
-										ClassOrInterfaceModifier.PUBLIC //
+								.addModifiers( //
+										Modifier.PUBLIC //
 								) //
 								.setName("ASimpleClass") //
 				) //
@@ -89,9 +90,9 @@ public class JavaCodeConverterTest {
 		CompilationUnit expected = new CompilationUnit() //
 				.addTypeDeclarations( //
 						new ClassDeclaration() //
-								.addClassOrInterfaceModifiers( //
-										ClassOrInterfaceModifier.PUBLIC, //
-										ClassOrInterfaceModifier.ABSTRACT //
+								.addModifiers( //
+										Modifier.PUBLIC, //
+										Modifier.ABSTRACT //
 								) //
 								.setName("ASimpleClass") //
 				) //
@@ -116,9 +117,9 @@ public class JavaCodeConverterTest {
 		CompilationUnit expected = new CompilationUnit() //
 				.addTypeDeclarations( //
 						new ClassDeclaration() //
-								.addClassOrInterfaceModifiers( //
-										ClassOrInterfaceModifier.PUBLIC, //
-										ClassOrInterfaceModifier.ABSTRACT //
+								.addModifiers( //
+										Modifier.PUBLIC, //
+										Modifier.ABSTRACT //
 								) //
 								.setName("ASimpleClass"), //
 						new ClassDeclaration() //
@@ -144,8 +145,8 @@ public class JavaCodeConverterTest {
 		CompilationUnit expected = new CompilationUnit() //
 				.addTypeDeclarations( //
 						new ClassDeclaration() //
-								.addClassOrInterfaceModifiers( //
-										ClassOrInterfaceModifier.PUBLIC //
+								.addModifiers( //
+										Modifier.PUBLIC //
 								) //
 								.setName("ASimpleClass") //
 				) //
@@ -171,8 +172,8 @@ public class JavaCodeConverterTest {
 		CompilationUnit expected = new CompilationUnit() //
 				.addTypeDeclarations( //
 						new ClassDeclaration() //
-								.addClassOrInterfaceModifiers( //
-										ClassOrInterfaceModifier.PUBLIC //
+								.addModifiers( //
+										Modifier.PUBLIC //
 								) //
 								.setName("ASimpleClass") //
 				) //
@@ -200,8 +201,8 @@ public class JavaCodeConverterTest {
 		CompilationUnit expected = new CompilationUnit() //
 				.addTypeDeclarations( //
 						new ClassDeclaration() //
-								.addClassOrInterfaceModifiers( //
-										ClassOrInterfaceModifier.PUBLIC //
+								.addModifiers( //
+										Modifier.PUBLIC //
 								) //
 								.setName("ASimpleClass") //
 				) //
@@ -231,8 +232,8 @@ public class JavaCodeConverterTest {
 		CompilationUnit expected = new CompilationUnit() //
 				.addTypeDeclarations( //
 						new ClassDeclaration() //
-								.addClassOrInterfaceModifiers( //
-										ClassOrInterfaceModifier.PUBLIC //
+								.addModifiers( //
+										Modifier.PUBLIC //
 								) //
 								.setName("ASimpleClass") //
 				) //
@@ -263,8 +264,8 @@ public class JavaCodeConverterTest {
 		CompilationUnit expected = new CompilationUnit() //
 				.addTypeDeclarations( //
 						new ClassDeclaration() //
-								.addClassOrInterfaceModifiers( //
-										ClassOrInterfaceModifier.PUBLIC //
+								.addModifiers( //
+										Modifier.PUBLIC //
 								) //
 								.setName("ASimpleClass") //
 				) //
@@ -297,8 +298,8 @@ public class JavaCodeConverterTest {
 		CompilationUnit expected = new CompilationUnit() //
 				.addTypeDeclarations( //
 						new ClassDeclaration() //
-								.addClassOrInterfaceModifiers( //
-										ClassOrInterfaceModifier.PUBLIC //
+								.addModifiers( //
+										Modifier.PUBLIC //
 								) //
 								.setName("ASimpleClass") //
 				) //
@@ -313,6 +314,35 @@ public class JavaCodeConverterTest {
 						new ImportDeclaration() //
 								.setQualifiedName("alles.hier.von.auch") //
 								.setSingleTypeImport(false) //
+				) //
+		;
+		// Run
+		CompilationUnit returned = unitUnderTest.convert(simpleClassFileContent);
+		// Check
+		assertEquals(expected, returned);
+	}
+
+	@DisplayName("Returns correct compilation unit passing a class file content with annotations for teh class.")
+	@Test
+	void simpleClassFileContentWithSimpleAnnotationForTheClassPassed_ReturnsACorrectCompilationUnit() {
+		// Prepare
+		String simpleClassFileContent = "" //
+				+ "@Data\n" //
+				+ "@Generated\n" //
+				+ "public class ASimpleClass {\n" //
+				+ "}\n" //
+		;
+		CompilationUnit expected = new CompilationUnit() //
+				.addTypeDeclarations( //
+						new ClassDeclaration() //
+								.addAnnotations( //
+										new Annotation().setName("Data"), //
+										new Annotation().setName("Generated") //
+								) //
+								.addModifiers( //
+										Modifier.PUBLIC //
+								) //
+								.setName("ASimpleClass") //
 				) //
 		;
 		// Run

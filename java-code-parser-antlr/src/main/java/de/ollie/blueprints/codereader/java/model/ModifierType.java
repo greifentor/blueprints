@@ -1,14 +1,13 @@
 package de.ollie.blueprints.codereader.java.model;
 
 /**
- * Identifiers for class or interface modifier types.
+ * Identifiers for modifier types.
  *
  * @author ollie (13.04.2020)
  */
-public enum ClassOrInterfaceModifierType {
+public enum ModifierType {
 
 	ABSTRACT, //
-	ANNOTATION, //
 	FINAL, //
 	PRIVATE, //
 	PROTECTED, //

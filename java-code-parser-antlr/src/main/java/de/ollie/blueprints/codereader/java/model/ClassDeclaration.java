@@ -17,12 +17,20 @@ import lombok.experimental.Accessors;
 @Generated
 public class ClassDeclaration implements TypeDeclaration {
 
+	private List<Annotation> annotations = new ArrayList<>();
+	private List<Modifier> modifiers = new ArrayList<>();
 	private String name;
-	private List<ClassOrInterfaceModifier> classOrInterfaceModifiers = new ArrayList<>();
 
-	public ClassDeclaration addClassOrInterfaceModifiers(ClassOrInterfaceModifier... classOrInterfaceModifiers) {
-		for (ClassOrInterfaceModifier classOrInterfaceModifier : classOrInterfaceModifiers) {
-			this.classOrInterfaceModifiers.add(classOrInterfaceModifier);
+	public ClassDeclaration addAnnotations(Annotation... annotations) {
+		for (Annotation annotation : annotations) {
+			this.annotations.add(annotation);
+		}
+		return this;
+	}
+
+	public ClassDeclaration addModifiers(Modifier... modifiers) {
+		for (Modifier modifier : modifiers) {
+			this.modifiers.add(modifier);
 		}
 		return this;
 	}

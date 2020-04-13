@@ -9,10 +9,12 @@ import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.TerminalNodeImpl;
 
 import de.ollie.blueprints.codereader.java.antlr.Java8BaseListener;
+import de.ollie.blueprints.codereader.java.antlr.Java8Parser.AnnotationContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.ClassDeclarationContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.ClassModifierContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.CompilationUnitContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.ImportDeclarationContext;
+import de.ollie.blueprints.codereader.java.antlr.Java8Parser.MarkerAnnotationContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.NormalClassDeclarationContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.PackageDeclarationContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.PackageNameContext;
@@ -23,10 +25,11 @@ import de.ollie.blueprints.codereader.java.antlr.Java8Parser.StaticImportOnDeman
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.TypeDeclarationContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.TypeImportOnDemandDeclarationContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.TypeNameContext;
+import de.ollie.blueprints.codereader.java.model.Annotation;
 import de.ollie.blueprints.codereader.java.model.ClassDeclaration;
-import de.ollie.blueprints.codereader.java.model.ClassOrInterfaceModifier;
 import de.ollie.blueprints.codereader.java.model.CompilationUnit;
 import de.ollie.blueprints.codereader.java.model.ImportDeclaration;
+import de.ollie.blueprints.codereader.java.model.Modifier;
 
 /**
  * The listener which converts the compilation unit from the parser tree walk.
@@ -113,7 +116,8 @@ public class JavaCodeConverterListener extends Java8BaseListener {
 					findNextChildByClassAndContent(ncdc, TerminalNodeImpl.class, "class").ifPresentOrElse( //
 							tni -> {
 								ClassDeclaration classDeclaration = new ClassDeclaration() //
-										.addClassOrInterfaceModifiers(getClassModifiers(ncdc)) //
+										.addAnnotations(getAnnotations(ncdc)) //
+										.addModifiers(getClassModifiers(ncdc)) //
 										.setName(tni.getText()) //
 								;
 								this.compilationUnit.addTypeDeclarations(classDeclaration);
@@ -127,19 +131,33 @@ public class JavaCodeConverterListener extends Java8BaseListener {
 		}
 	}
 
-	private ClassOrInterfaceModifier[] getClassModifiers(ParserRuleContext prc) {
-		List<ClassOrInterfaceModifier> l = new ArrayList<>();
+	private Annotation[] getAnnotations(ParserRuleContext prc) {
+		List<Annotation> l = new ArrayList<>();
+		for (ClassModifierContext cmc : findChildsByClass(prc, ClassModifierContext.class)) {
+			for (AnnotationContext ac : findChildsByClass(cmc, AnnotationContext.class)) {
+				findChildByClass(ac, MarkerAnnotationContext.class).ifPresent( //
+						mac -> findChildByClass(mac, TypeNameContext.class).ifPresent( //
+								tnc -> l.add(new Annotation().setName(tnc.getText())) //
+						) //
+				);
+			}
+		}
+		return l.toArray(new Annotation[0]);
+	}
+
+	private Modifier[] getClassModifiers(ParserRuleContext prc) {
+		List<Modifier> l = new ArrayList<>();
 		for (ClassModifierContext cmc : findChildsByClass(prc, ClassModifierContext.class)) {
 			for (TerminalNodeImpl tni : findChildsByClass(cmc, TerminalNodeImpl.class)) {
 				String value = tni.getText();
 				if (value.equals("abstract")) {
-					l.add(ClassOrInterfaceModifier.ABSTRACT);
+					l.add(Modifier.ABSTRACT);
 				} else if (value.equals("public")) {
-					l.add(ClassOrInterfaceModifier.PUBLIC);
+					l.add(Modifier.PUBLIC);
 				}
 			}
 		}
-		return l.toArray(new ClassOrInterfaceModifier[0]);
+		return l.toArray(new Modifier[0]);
 	}
 
 	private static <T> Optional<T> findChildByClassAndContent(ParserRuleContext ctx, Class<T> cls, String content) {
@@ -205,6 +223,14 @@ public class JavaCodeConverterListener extends Java8BaseListener {
 				System.out.println(indent + " - " + i + " > " + prc.getChild(i).getClass().getSimpleName() + " > "
 						+ prc.getChild(i).getText());
 			}
+		}
+	}
+
+	static void printChildrenFlat(String indent, ParserRuleContext prc) {
+		System.out.println(indent + " > " + prc.getClass().getSimpleName() + " = " + prc.getText());
+		for (int i = 0, leni = prc.getChildCount(); i < leni; i++) {
+			System.out.println(indent + " - " + i + " > " + prc.getChild(i).getClass().getSimpleName() + " > "
+					+ prc.getChild(i).getText());
 		}
 	}
 
