@@ -12,6 +12,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import de.ollie.blueprints.codereader.java.model.Annotation;
 import de.ollie.blueprints.codereader.java.model.ClassDeclaration;
 import de.ollie.blueprints.codereader.java.model.CompilationUnit;
+import de.ollie.blueprints.codereader.java.model.ElementValuePair;
 import de.ollie.blueprints.codereader.java.model.ImportDeclaration;
 import de.ollie.blueprints.codereader.java.model.Modifier;
 
@@ -368,6 +369,39 @@ public class JavaCodeConverterTest {
 								.addAnnotations( //
 										new Annotation().setName("AnAnnotation").setValue("\"bla\""), //
 										new Annotation().setName("RequestMapping").setValue("\"api/v1\"") //
+								) //
+								.addModifiers( //
+										Modifier.PUBLIC //
+								) //
+								.setName("ASimpleClass") //
+				) //
+		;
+		// Run
+		CompilationUnit returned = unitUnderTest.convert(simpleClassFileContent);
+		// Check
+		assertEquals(expected, returned);
+	}
+
+	@DisplayName("Returns correct compilation unit passing a class file content with annotations for the class which "
+			+ "have a parameter list.")
+	@Test
+	void simpleClassFileContentWithAnnotationWithAListOfParametersForTheClassPassed_ReturnsACorrectCompilationUnit() {
+		// Prepare
+		String simpleClassFileContent = "" //
+				+ "@AnAnnotation(param0 = 4711, param1 = \"a string\")\n" //
+				+ "public class ASimpleClass {\n" //
+				+ "}\n" //
+		;
+		CompilationUnit expected = new CompilationUnit() //
+				.addTypeDeclarations( //
+						new ClassDeclaration() //
+								.addAnnotations( //
+										new Annotation() //
+												.addElementValues( //
+														new ElementValuePair().setKey("param0").setValue("4711"), //
+														new ElementValuePair().setKey("param1").setValue("\"a string\"") //
+												) //
+												.setName("AnAnnotation")//
 								) //
 								.addModifiers( //
 										Modifier.PUBLIC //

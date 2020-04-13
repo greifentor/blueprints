@@ -14,8 +14,11 @@ import de.ollie.blueprints.codereader.java.antlr.Java8Parser.ClassDeclarationCon
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.ClassModifierContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.CompilationUnitContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.ElementValueContext;
+import de.ollie.blueprints.codereader.java.antlr.Java8Parser.ElementValuePairContext;
+import de.ollie.blueprints.codereader.java.antlr.Java8Parser.ElementValuePairListContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.ImportDeclarationContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.MarkerAnnotationContext;
+import de.ollie.blueprints.codereader.java.antlr.Java8Parser.NormalAnnotationContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.NormalClassDeclarationContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.PackageDeclarationContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.PackageNameContext;
@@ -30,6 +33,7 @@ import de.ollie.blueprints.codereader.java.antlr.Java8Parser.TypeNameContext;
 import de.ollie.blueprints.codereader.java.model.Annotation;
 import de.ollie.blueprints.codereader.java.model.ClassDeclaration;
 import de.ollie.blueprints.codereader.java.model.CompilationUnit;
+import de.ollie.blueprints.codereader.java.model.ElementValuePair;
 import de.ollie.blueprints.codereader.java.model.ImportDeclaration;
 import de.ollie.blueprints.codereader.java.model.Modifier;
 
@@ -151,6 +155,26 @@ public class JavaCodeConverterListener extends Java8BaseListener {
 								)) //
 						) //
 				);
+				findChildByClass(ac, NormalAnnotationContext.class).ifPresent( //
+						nac -> findChildByClass(nac, TypeNameContext.class).ifPresent( //
+								tnc -> {
+									Annotation annotation = new Annotation().setName(tnc.getText());
+									l.add(annotation);
+									findChildByClass(nac, ElementValuePairListContext.class).ifPresent( //
+											evplc -> findChildsByClass(evplc, ElementValuePairContext.class) //
+													.forEach(evpc -> {
+														String key = findChildByClass(evpc, TerminalNodeImpl.class)
+																.get().getText();
+														String value = findChildByClass(evpc, ElementValueContext.class)
+																.get().getText();
+														annotation.addElementValues(new ElementValuePair() //
+																.setKey(key) //
+																.setValue(value) //
+														);
+													}) //
+									);
+								}) //
+				);
 			}
 		}
 		return l.toArray(new Annotation[0]);
@@ -199,7 +223,7 @@ public class JavaCodeConverterListener extends Java8BaseListener {
 	}
 
 	private static <T> List<T> findChildsByClass(ParseTree ctx, Class<T> cls) {
-		List<T> l = new ArrayList<>(ctx.getChildCount());
+		List<T> l = new ArrayList<>(/* ctx.getChildCount() */);
 		for (int i = 0, leni = ctx.getChildCount(); i < leni; i++) {
 			if (ctx.getChild(i).getClass() == cls) {
 				l.add((T) ctx.getChild(i));

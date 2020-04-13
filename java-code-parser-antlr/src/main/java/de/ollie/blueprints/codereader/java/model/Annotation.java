@@ -1,6 +1,7 @@
 package de.ollie.blueprints.codereader.java.model;
 
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 import lombok.Data;
 import lombok.Generated;
@@ -18,5 +19,13 @@ public class Annotation {
 
 	private String name;
 	private String value;
+	private Map<String, String> elementValues = new HashMap<>();
+
+	public Annotation addElementValues(ElementValuePair... elementValues) {
+		for (ElementValuePair elementValue : elementValues) {
+			this.elementValues.put(elementValue.getKey(), elementValue.getValue());
+		}
+		return this;
+	}
 
 }
