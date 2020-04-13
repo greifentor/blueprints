@@ -322,7 +322,7 @@ public class JavaCodeConverterTest {
 		assertEquals(expected, returned);
 	}
 
-	@DisplayName("Returns correct compilation unit passing a class file content with annotations for teh class.")
+	@DisplayName("Returns correct compilation unit passing a class file content with annotations for theclass.")
 	@Test
 	void simpleClassFileContentWithSimpleAnnotationForTheClassPassed_ReturnsACorrectCompilationUnit() {
 		// Prepare
@@ -338,6 +338,36 @@ public class JavaCodeConverterTest {
 								.addAnnotations( //
 										new Annotation().setName("Data"), //
 										new Annotation().setName("Generated") //
+								) //
+								.addModifiers( //
+										Modifier.PUBLIC //
+								) //
+								.setName("ASimpleClass") //
+				) //
+		;
+		// Run
+		CompilationUnit returned = unitUnderTest.convert(simpleClassFileContent);
+		// Check
+		assertEquals(expected, returned);
+	}
+
+	@DisplayName("Returns correct compilation unit passing a class file content with annotations for the class which "
+			+ "have a simple parameters.")
+	@Test
+	void simpleClassFileContentWithAnnotationWithSimpleParametersForTheClassPassed_ReturnsACorrectCompilationUnit() {
+		// Prepare
+		String simpleClassFileContent = "" //
+				+ "@AnAnnotation(\"bla\")\n" //
+				+ "@RequestMapping(\"api/v1\")\n" //
+				+ "public class ASimpleClass {\n" //
+				+ "}\n" //
+		;
+		CompilationUnit expected = new CompilationUnit() //
+				.addTypeDeclarations( //
+						new ClassDeclaration() //
+								.addAnnotations( //
+										new Annotation().setName("AnAnnotation").setValue("\"bla\""), //
+										new Annotation().setName("RequestMapping").setValue("\"api/v1\"") //
 								) //
 								.addModifiers( //
 										Modifier.PUBLIC //

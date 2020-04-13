@@ -13,12 +13,14 @@ import de.ollie.blueprints.codereader.java.antlr.Java8Parser.AnnotationContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.ClassDeclarationContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.ClassModifierContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.CompilationUnitContext;
+import de.ollie.blueprints.codereader.java.antlr.Java8Parser.ElementValueContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.ImportDeclarationContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.MarkerAnnotationContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.NormalClassDeclarationContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.PackageDeclarationContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.PackageNameContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.PackageOrTypeNameContext;
+import de.ollie.blueprints.codereader.java.antlr.Java8Parser.SingleElementAnnotationContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.SingleStaticImportDeclarationContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.SingleTypeImportDeclarationContext;
 import de.ollie.blueprints.codereader.java.antlr.Java8Parser.StaticImportOnDemandDeclarationContext;
@@ -138,6 +140,15 @@ public class JavaCodeConverterListener extends Java8BaseListener {
 				findChildByClass(ac, MarkerAnnotationContext.class).ifPresent( //
 						mac -> findChildByClass(mac, TypeNameContext.class).ifPresent( //
 								tnc -> l.add(new Annotation().setName(tnc.getText())) //
+						) //
+				);
+				findChildByClass(ac, SingleElementAnnotationContext.class).ifPresent( //
+						seac -> findChildByClass(seac, TypeNameContext.class).ifPresent( //
+								tnc -> l.add(new Annotation().setName(tnc.getText()).setValue( //
+										findChildByClass(seac, ElementValueContext.class) //
+												.map(ElementValueContext::getText) //
+												.get() //
+								)) //
 						) //
 				);
 			}

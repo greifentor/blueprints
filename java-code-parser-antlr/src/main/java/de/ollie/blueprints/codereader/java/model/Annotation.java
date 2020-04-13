@@ -17,5 +17,6 @@ import lombok.experimental.Accessors;
 public class Annotation {
 
 	private String name;
+	private String value;
 
 }
