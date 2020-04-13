@@ -72,6 +72,7 @@
 
 	<modules>
 		<module>expandable-dtos</module>
+        <module>java-code-parser-antlr</module>
 		<module>pageable-with-range</module>
 		<module>rest-client</module>
 	</modules>

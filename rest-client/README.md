@@ -1,3 +1,3 @@
-# Expandable DTO's
+# REST client
 
-A blue print for expandable DTO's.
+A blue print for simple REST client.
