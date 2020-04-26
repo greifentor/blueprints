@@ -13,7 +13,10 @@ import de.ollie.blueprints.codereader.java.model.Annotation;
 import de.ollie.blueprints.codereader.java.model.ClassDeclaration;
 import de.ollie.blueprints.codereader.java.model.CompilationUnit;
 import de.ollie.blueprints.codereader.java.model.ElementValuePair;
+import de.ollie.blueprints.codereader.java.model.FieldDeclaration;
+import de.ollie.blueprints.codereader.java.model.FormalParameter;
 import de.ollie.blueprints.codereader.java.model.ImportDeclaration;
+import de.ollie.blueprints.codereader.java.model.MethodDeclaration;
 import de.ollie.blueprints.codereader.java.model.Modifier;
 
 @ExtendWith(MockitoExtension.class)
@@ -407,6 +410,256 @@ public class JavaCodeConverterTest {
 										Modifier.PUBLIC //
 								) //
 								.setName("ASimpleClass") //
+				) //
+		;
+		// Run
+		CompilationUnit returned = unitUnderTest.convert(simpleClassFileContent);
+		// Check
+		assertEquals(expected, returned);
+	}
+
+	@DisplayName("Returns correct compilation unit passing a class file content a simple field declaration.")
+	@Test
+	void simpleClassFileContentWithASimpleFieldDeclarationPassed_ReturnsACorrectCompilationUnit() {
+		// Prepare
+		String simpleClassFileContent = "" //
+				+ "public class AClass {\n" //
+				+ "\n" //
+				+ "    private int member;\n" //
+				+ "\n" //
+				+ "}\n" //
+		;
+		CompilationUnit expected = new CompilationUnit() //
+				.addTypeDeclarations( //
+						new ClassDeclaration() //
+								.addFields(new FieldDeclaration() //
+										.addModifiers( //
+												Modifier.PRIVATE //
+										) //
+										.setName("member") //
+										.setType("int") //
+								) //
+								.addModifiers( //
+										Modifier.PUBLIC //
+								) //
+								.setName("AClass") //
+				) //
+		;
+		// Run
+		CompilationUnit returned = unitUnderTest.convert(simpleClassFileContent);
+		// Check
+		assertEquals(expected, returned);
+	}
+
+	@DisplayName("Returns correct compilation unit passing a class file content with multiple field declarations.")
+	@Test
+	void simpleClassFileContentWithMultipleFieldDeclarationsPassed_ReturnsACorrectCompilationUnit() {
+		// Prepare
+		String simpleClassFileContent = "" //
+				+ "public class AClass {\n" //
+				+ "\n" //
+				+ "    private int member, anotherMember = 0;\n" //
+				+ "    protected String aThirdMember = null;\n" //
+				+ "\n" //
+				+ "}\n" //
+		;
+		CompilationUnit expected = new CompilationUnit() //
+				.addTypeDeclarations( //
+						new ClassDeclaration() //
+								.addFields( //
+										new FieldDeclaration() //
+												.addModifiers( //
+														Modifier.PRIVATE //
+												) //
+												.setName("member") //
+												.setType("int"), //
+										new FieldDeclaration() //
+												.addModifiers( //
+														Modifier.PRIVATE //
+												) //
+												.setName("anotherMember") //
+												.setType("int"), //
+										new FieldDeclaration() //
+												.addModifiers( //
+														Modifier.PROTECTED //
+												) //
+												.setName("aThirdMember") //
+												.setType("String") //
+								) //
+								.addModifiers( //
+										Modifier.PUBLIC //
+								) //
+								.setName("AClass") //
+				) //
+		;
+		// Run
+		CompilationUnit returned = unitUnderTest.convert(simpleClassFileContent);
+		// Check
+		assertEquals(expected, returned);
+	}
+
+	@DisplayName("Returns correct compilation unit passing a class file content with a field declaration with annotations.")
+	@Test
+	void simpleClassFileContentWithFieldDeclarationWithAnnotationsPassed_ReturnsACorrectCompilationUnit() {
+		// Prepare
+		String simpleClassFileContent = "" //
+				+ "public class AClass {\n" //
+				+ "\n" //
+				+ "    @AnAnnotation(name = \"annotationName\") @AnotherAnnotation private int member;\n" //
+				+ "\n" //
+				+ "}\n" //
+		;
+		CompilationUnit expected = new CompilationUnit() //
+				.addTypeDeclarations( //
+						new ClassDeclaration() //
+								.addFields(new FieldDeclaration() //
+										.addAnnotations( //
+												new Annotation() //
+														.addElementValues(new ElementValuePair() //
+																.setKey("name") //
+																.setValue("\"annotationName\"") //
+														) //
+														.setName("AnAnnotation"), //
+												new Annotation() //
+														.setName("AnotherAnnotation") //
+										) //
+										.addModifiers( //
+												Modifier.PRIVATE //
+										) //
+										.setName("member") //
+										.setType("int") //
+								) //
+								.addModifiers( //
+										Modifier.PUBLIC //
+								) //
+								.setName("AClass") //
+				) //
+		;
+		// Run
+		CompilationUnit returned = unitUnderTest.convert(simpleClassFileContent);
+		// Check
+		assertEquals(expected, returned);
+	}
+
+	@DisplayName("Returns correct compilation unit passing a class file content with a simple method declaration.")
+	@Test
+	void simpleClassFileContentWithASimpleMethodPassed_ReturnsACorrectCompilationUnit() {
+		// Prepare
+		String simpleClassFileContent = "" //
+				+ "public class AClass {\n" //
+				+ "\n" //
+				+ "    public void AMethod() {\n" //
+				+ "        bla();\n" //
+				+ "    }\n" //
+				+ "\n" //
+				+ "}\n" //
+		;
+		CompilationUnit expected = new CompilationUnit() //
+				.addTypeDeclarations( //
+						new ClassDeclaration() //
+								.addMethods(new MethodDeclaration() //
+										.addModifiers(Modifier.PUBLIC) //
+										.setName("AMethod") //
+										.setReturnType("void") //
+								) //
+								.addModifiers( //
+										Modifier.PUBLIC //
+								) //
+								.setName("AClass") //
+				) //
+		;
+		// Run
+		CompilationUnit returned = unitUnderTest.convert(simpleClassFileContent);
+		// Check
+		assertEquals(expected, returned);
+	}
+
+	@DisplayName("Returns correct compilation unit passing a class file content with a method declaration with annotations.")
+	@Test
+	void simpleClassFileContentWithMethodDeclarationWithAnnotationsPassed_ReturnsACorrectCompilationUnit() {
+		// Prepare
+		String simpleClassFileContent = "" //
+				+ "public class AClass {\n" //
+				+ "\n" //
+				+ "    @Getter @AnAnnotation(parameter = 4711) public void AMethod() {\n" //
+				+ "        bla();\n" //
+				+ "    }\n" //
+				+ "\n" //
+				+ "}\n" //
+		;
+		CompilationUnit expected = new CompilationUnit() //
+				.addTypeDeclarations( //
+						new ClassDeclaration() //
+								.addMethods(new MethodDeclaration() //
+										.addAnnotations( //
+												new Annotation() //
+														.setName("Getter"), //
+												new Annotation() //
+														.addElementValues(new ElementValuePair() //
+																.setKey("parameter") //
+																.setValue("4711") //
+														) //
+														.setName("AnAnnotation") //
+										) //
+										.addModifiers(Modifier.PUBLIC) //
+										.setName("AMethod") //
+										.setReturnType("void") //
+								) //
+								.addModifiers( //
+										Modifier.PUBLIC //
+								) //
+								.setName("AClass") //
+				) //
+		;
+		// Run
+		CompilationUnit returned = unitUnderTest.convert(simpleClassFileContent);
+		// Check
+		assertEquals(expected, returned);
+	}
+
+	@DisplayName("Returns correct compilation unit passing a class file content with a method declaration with parameters with annotations.")
+	@Test
+	void simpleClassFileContentWithMethodWithParametersPassed_ReturnsACorrectCompilationUnit() {
+		// Prepare
+		String simpleClassFileContent = "" //
+				+ "public class AClass {\n" //
+				+ "\n" //
+				+ "    public void AMethod(int aParam, @Name @RequestParam(name = \"id\") String name) {\n" //
+				+ "        bla();\n" //
+				+ "    }\n" //
+				+ "\n" //
+				+ "}\n" //
+		;
+		CompilationUnit expected = new CompilationUnit() //
+				.addTypeDeclarations( //
+						new ClassDeclaration() //
+								.addMethods(new MethodDeclaration() //
+										.addModifiers(Modifier.PUBLIC) //
+										.addFormalParameters( //
+												new FormalParameter() //
+														.setName("aParam") //
+														.setType("int"), //
+												new FormalParameter() //
+														.addAnnotations( //
+																new Annotation() //
+																		.setName("Name"), //
+																new Annotation() //
+																		.addElementValues(new ElementValuePair() //
+																				.setKey("name") //
+																				.setValue("\"id\"") //
+																		) //
+																		.setName("RequestParam") //
+														) //
+														.setName("name") //
+														.setType("String") //
+										) //
+										.setName("AMethod") //
+										.setReturnType("void") //
+								) //
+								.addModifiers( //
+										Modifier.PUBLIC //
+								) //
+								.setName("AClass") //
 				) //
 		;
 		// Run

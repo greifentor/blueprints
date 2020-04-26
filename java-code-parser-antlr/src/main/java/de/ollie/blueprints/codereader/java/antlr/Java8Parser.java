@@ -272,6 +272,7 @@ public class Java8Parser extends Parser {
 		_interp = new ParserATNSimulator(this, _ATN, _decisionToDFA, _sharedContextCache);
 	}
 
+	@Generated
 	public static class LiteralContext extends ParserRuleContext {
 		public TerminalNode IntegerLiteral() {
 			return getToken(Java8Parser.IntegerLiteral, 0);
@@ -349,6 +350,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class PrimitiveTypeContext extends ParserRuleContext {
 		public NumericTypeContext numericType() {
 			return getRuleContext(NumericTypeContext.class, 0);
@@ -443,6 +445,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class NumericTypeContext extends ParserRuleContext {
 		public IntegralTypeContext integralType() {
 			return getRuleContext(IntegralTypeContext.class, 0);
@@ -511,6 +514,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class IntegralTypeContext extends ParserRuleContext {
 		public IntegralTypeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -563,6 +567,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class FloatingPointTypeContext extends ParserRuleContext {
 		public FloatingPointTypeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -614,6 +619,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ReferenceTypeContext extends ParserRuleContext {
 		public ClassOrInterfaceTypeContext classOrInterfaceType() {
 			return getRuleContext(ClassOrInterfaceTypeContext.class, 0);
@@ -685,6 +691,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ClassOrInterfaceTypeContext extends ParserRuleContext {
 		public ClassType_lfno_classOrInterfaceTypeContext classType_lfno_classOrInterfaceType() {
 			return getRuleContext(ClassType_lfno_classOrInterfaceTypeContext.class, 0);
@@ -790,6 +797,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ClassTypeContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -916,6 +924,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ClassType_lf_classOrInterfaceTypeContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -1002,6 +1011,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ClassType_lfno_classOrInterfaceTypeContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -1086,6 +1096,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class InterfaceTypeContext extends ParserRuleContext {
 		public ClassTypeContext classType() {
 			return getRuleContext(ClassTypeContext.class, 0);
@@ -1132,6 +1143,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class InterfaceType_lf_classOrInterfaceTypeContext extends ParserRuleContext {
 		public ClassType_lf_classOrInterfaceTypeContext classType_lf_classOrInterfaceType() {
 			return getRuleContext(ClassType_lf_classOrInterfaceTypeContext.class, 0);
@@ -1180,6 +1192,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class InterfaceType_lfno_classOrInterfaceTypeContext extends ParserRuleContext {
 		public ClassType_lfno_classOrInterfaceTypeContext classType_lfno_classOrInterfaceType() {
 			return getRuleContext(ClassType_lfno_classOrInterfaceTypeContext.class, 0);
@@ -1228,6 +1241,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class TypeVariableContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -1297,6 +1311,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ArrayTypeContext extends ParserRuleContext {
 		public PrimitiveTypeContext primitiveType() {
 			return getRuleContext(PrimitiveTypeContext.class, 0);
@@ -1378,6 +1393,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class DimsContext extends ParserRuleContext {
 		public List<AnnotationContext> annotation() {
 			return getRuleContexts(AnnotationContext.class);
@@ -1478,6 +1494,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class TypeParameterContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -1561,6 +1578,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class TypeParameterModifierContext extends ParserRuleContext {
 		public AnnotationContext annotation() {
 			return getRuleContext(AnnotationContext.class, 0);
@@ -1607,6 +1625,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class TypeBoundContext extends ParserRuleContext {
 		public TypeVariableContext typeVariable() {
 			return getRuleContext(TypeVariableContext.class, 0);
@@ -1695,6 +1714,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class AdditionalBoundContext extends ParserRuleContext {
 		public InterfaceTypeContext interfaceType() {
 			return getRuleContext(InterfaceTypeContext.class, 0);
@@ -1743,6 +1763,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class TypeArgumentsContext extends ParserRuleContext {
 		public TypeArgumentListContext typeArgumentList() {
 			return getRuleContext(TypeArgumentListContext.class, 0);
@@ -1793,6 +1814,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class TypeArgumentListContext extends ParserRuleContext {
 		public List<TypeArgumentContext> typeArgument() {
 			return getRuleContexts(TypeArgumentContext.class);
@@ -1860,6 +1882,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class TypeArgumentContext extends ParserRuleContext {
 		public ReferenceTypeContext referenceType() {
 			return getRuleContext(ReferenceTypeContext.class, 0);
@@ -1921,6 +1944,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class WildcardContext extends ParserRuleContext {
 		public List<AnnotationContext> annotation() {
 			return getRuleContexts(AnnotationContext.class);
@@ -2000,6 +2024,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class WildcardBoundsContext extends ParserRuleContext {
 		public ReferenceTypeContext referenceType() {
 			return getRuleContext(ReferenceTypeContext.class, 0);
@@ -2063,6 +2088,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class PackageNameContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -2151,6 +2177,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class TypeNameContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -2216,6 +2243,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class PackageOrTypeNameContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -2304,6 +2332,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ExpressionNameContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -2369,6 +2398,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class MethodNameContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -2415,6 +2445,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class AmbiguousNameContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -2503,6 +2534,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class CompilationUnitContext extends ParserRuleContext {
 		public TerminalNode EOF() {
 			return getToken(Java8Parser.EOF, 0);
@@ -2609,6 +2641,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class PackageDeclarationContext extends ParserRuleContext {
 		public PackageNameContext packageName() {
 			return getRuleContext(PackageNameContext.class, 0);
@@ -2682,6 +2715,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class PackageModifierContext extends ParserRuleContext {
 		public AnnotationContext annotation() {
 			return getRuleContext(AnnotationContext.class, 0);
@@ -2728,6 +2762,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ImportDeclarationContext extends ParserRuleContext {
 		public SingleTypeImportDeclarationContext singleTypeImportDeclaration() {
 			return getRuleContext(SingleTypeImportDeclarationContext.class, 0);
@@ -2809,6 +2844,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class SingleTypeImportDeclarationContext extends ParserRuleContext {
 		public TypeNameContext typeName() {
 			return getRuleContext(TypeNameContext.class, 0);
@@ -2859,6 +2895,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class TypeImportOnDemandDeclarationContext extends ParserRuleContext {
 		public PackageOrTypeNameContext packageOrTypeName() {
 			return getRuleContext(PackageOrTypeNameContext.class, 0);
@@ -2913,6 +2950,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class SingleStaticImportDeclarationContext extends ParserRuleContext {
 		public TypeNameContext typeName() {
 			return getRuleContext(TypeNameContext.class, 0);
@@ -2973,6 +3011,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class StaticImportOnDemandDeclarationContext extends ParserRuleContext {
 		public TypeNameContext typeName() {
 			return getRuleContext(TypeNameContext.class, 0);
@@ -3029,6 +3068,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class TypeDeclarationContext extends ParserRuleContext {
 		public ClassDeclarationContext classDeclaration() {
 			return getRuleContext(ClassDeclarationContext.class, 0);
@@ -3096,6 +3136,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ClassDeclarationContext extends ParserRuleContext {
 		public NormalClassDeclarationContext normalClassDeclaration() {
 			return getRuleContext(NormalClassDeclarationContext.class, 0);
@@ -3157,6 +3198,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class NormalClassDeclarationContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -3277,6 +3319,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ClassModifierContext extends ParserRuleContext {
 		public AnnotationContext annotation() {
 			return getRuleContext(AnnotationContext.class, 0);
@@ -3372,6 +3415,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class TypeParametersContext extends ParserRuleContext {
 		public TypeParameterListContext typeParameterList() {
 			return getRuleContext(TypeParameterListContext.class, 0);
@@ -3422,6 +3466,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class TypeParameterListContext extends ParserRuleContext {
 		public List<TypeParameterContext> typeParameter() {
 			return getRuleContexts(TypeParameterContext.class);
@@ -3489,6 +3534,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class SuperclassContext extends ParserRuleContext {
 		public ClassTypeContext classType() {
 			return getRuleContext(ClassTypeContext.class, 0);
@@ -3537,6 +3583,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class SuperinterfacesContext extends ParserRuleContext {
 		public InterfaceTypeListContext interfaceTypeList() {
 			return getRuleContext(InterfaceTypeListContext.class, 0);
@@ -3585,6 +3632,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class InterfaceTypeListContext extends ParserRuleContext {
 		public List<InterfaceTypeContext> interfaceType() {
 			return getRuleContexts(InterfaceTypeContext.class);
@@ -3652,6 +3700,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ClassBodyContext extends ParserRuleContext {
 		public List<ClassBodyDeclarationContext> classBodyDeclaration() {
 			return getRuleContexts(ClassBodyDeclarationContext.class);
@@ -3726,6 +3775,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ClassBodyDeclarationContext extends ParserRuleContext {
 		public ClassMemberDeclarationContext classMemberDeclaration() {
 			return getRuleContext(ClassMemberDeclarationContext.class, 0);
@@ -3807,6 +3857,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ClassMemberDeclarationContext extends ParserRuleContext {
 		public FieldDeclarationContext fieldDeclaration() {
 			return getRuleContext(FieldDeclarationContext.class, 0);
@@ -3894,6 +3945,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class FieldDeclarationContext extends ParserRuleContext {
 		public UnannTypeContext unannType() {
 			return getRuleContext(UnannTypeContext.class, 0);
@@ -3972,6 +4024,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class FieldModifierContext extends ParserRuleContext {
 		public AnnotationContext annotation() {
 			return getRuleContext(AnnotationContext.class, 0);
@@ -4067,6 +4120,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class VariableDeclaratorListContext extends ParserRuleContext {
 		public List<VariableDeclaratorContext> variableDeclarator() {
 			return getRuleContexts(VariableDeclaratorContext.class);
@@ -4134,6 +4188,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class VariableDeclaratorContext extends ParserRuleContext {
 		public VariableDeclaratorIdContext variableDeclaratorId() {
 			return getRuleContext(VariableDeclaratorIdContext.class, 0);
@@ -4197,6 +4252,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class VariableDeclaratorIdContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -4258,6 +4314,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class VariableInitializerContext extends ParserRuleContext {
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class, 0);
@@ -4347,6 +4404,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class UnannTypeContext extends ParserRuleContext {
 		public UnannPrimitiveTypeContext unannPrimitiveType() {
 			return getRuleContext(UnannPrimitiveTypeContext.class, 0);
@@ -4408,6 +4466,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class UnannPrimitiveTypeContext extends ParserRuleContext {
 		public NumericTypeContext numericType() {
 			return getRuleContext(NumericTypeContext.class, 0);
@@ -4473,6 +4532,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class UnannReferenceTypeContext extends ParserRuleContext {
 		public UnannClassOrInterfaceTypeContext unannClassOrInterfaceType() {
 			return getRuleContext(UnannClassOrInterfaceTypeContext.class, 0);
@@ -4544,6 +4604,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class UnannClassOrInterfaceTypeContext extends ParserRuleContext {
 		public UnannClassType_lfno_unannClassOrInterfaceTypeContext unannClassType_lfno_unannClassOrInterfaceType() {
 			return getRuleContext(UnannClassType_lfno_unannClassOrInterfaceTypeContext.class, 0);
@@ -4650,6 +4711,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class UnannClassTypeContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -4762,6 +4824,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class UnannClassType_lf_unannClassOrInterfaceTypeContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -4849,6 +4912,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class UnannClassType_lfno_unannClassOrInterfaceTypeContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -4912,6 +4976,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class UnannInterfaceTypeContext extends ParserRuleContext {
 		public UnannClassTypeContext unannClassType() {
 			return getRuleContext(UnannClassTypeContext.class, 0);
@@ -4958,6 +5023,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class UnannInterfaceType_lf_unannClassOrInterfaceTypeContext extends ParserRuleContext {
 		public UnannClassType_lf_unannClassOrInterfaceTypeContext unannClassType_lf_unannClassOrInterfaceType() {
 			return getRuleContext(UnannClassType_lf_unannClassOrInterfaceTypeContext.class, 0);
@@ -5006,6 +5072,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class UnannInterfaceType_lfno_unannClassOrInterfaceTypeContext extends ParserRuleContext {
 		public UnannClassType_lfno_unannClassOrInterfaceTypeContext unannClassType_lfno_unannClassOrInterfaceType() {
 			return getRuleContext(UnannClassType_lfno_unannClassOrInterfaceTypeContext.class, 0);
@@ -5054,6 +5121,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class UnannTypeVariableContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -5100,6 +5168,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class UnannArrayTypeContext extends ParserRuleContext {
 		public UnannPrimitiveTypeContext unannPrimitiveType() {
 			return getRuleContext(UnannPrimitiveTypeContext.class, 0);
@@ -5181,6 +5250,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class MethodDeclarationContext extends ParserRuleContext {
 		public MethodHeaderContext methodHeader() {
 			return getRuleContext(MethodHeaderContext.class, 0);
@@ -5259,6 +5329,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class MethodModifierContext extends ParserRuleContext {
 		public AnnotationContext annotation() {
 			return getRuleContext(AnnotationContext.class, 0);
@@ -5366,6 +5437,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class MethodHeaderContext extends ParserRuleContext {
 		public ResultContext result() {
 			return getRuleContext(ResultContext.class, 0);
@@ -5495,6 +5567,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ResultContext extends ParserRuleContext {
 		public UnannTypeContext unannType() {
 			return getRuleContext(UnannTypeContext.class, 0);
@@ -5562,6 +5635,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class MethodDeclaratorContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -5644,6 +5718,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class FormalParameterListContext extends ParserRuleContext {
 		public ReceiverParameterContext receiverParameter() {
 			return getRuleContext(ReceiverParameterContext.class, 0);
@@ -5719,6 +5794,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class FormalParametersContext extends ParserRuleContext {
 		public List<FormalParameterContext> formalParameter() {
 			return getRuleContexts(FormalParameterContext.class);
@@ -5821,6 +5897,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class FormalParameterContext extends ParserRuleContext {
 		public UnannTypeContext unannType() {
 			return getRuleContext(UnannTypeContext.class, 0);
@@ -5896,6 +5973,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class VariableModifierContext extends ParserRuleContext {
 		public AnnotationContext annotation() {
 			return getRuleContext(AnnotationContext.class, 0);
@@ -5955,6 +6033,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class LastFormalParameterContext extends ParserRuleContext {
 		public UnannTypeContext unannType() {
 			return getRuleContext(UnannTypeContext.class, 0);
@@ -6069,6 +6148,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ReceiverParameterContext extends ParserRuleContext {
 		public UnannTypeContext unannType() {
 			return getRuleContext(UnannTypeContext.class, 0);
@@ -6156,6 +6236,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class Throws_Context extends ParserRuleContext {
 		public ExceptionTypeListContext exceptionTypeList() {
 			return getRuleContext(ExceptionTypeListContext.class, 0);
@@ -6204,6 +6285,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ExceptionTypeListContext extends ParserRuleContext {
 		public List<ExceptionTypeContext> exceptionType() {
 			return getRuleContexts(ExceptionTypeContext.class);
@@ -6271,6 +6353,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ExceptionTypeContext extends ParserRuleContext {
 		public ClassTypeContext classType() {
 			return getRuleContext(ClassTypeContext.class, 0);
@@ -6332,6 +6415,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class MethodBodyContext extends ParserRuleContext {
 		public BlockContext block() {
 			return getRuleContext(BlockContext.class, 0);
@@ -6391,6 +6475,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class InstanceInitializerContext extends ParserRuleContext {
 		public BlockContext block() {
 			return getRuleContext(BlockContext.class, 0);
@@ -6437,6 +6522,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class StaticInitializerContext extends ParserRuleContext {
 		public BlockContext block() {
 			return getRuleContext(BlockContext.class, 0);
@@ -6485,6 +6571,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ConstructorDeclarationContext extends ParserRuleContext {
 		public ConstructorDeclaratorContext constructorDeclarator() {
 			return getRuleContext(ConstructorDeclaratorContext.class, 0);
@@ -6575,6 +6662,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ConstructorModifierContext extends ParserRuleContext {
 		public AnnotationContext annotation() {
 			return getRuleContext(AnnotationContext.class, 0);
@@ -6646,6 +6734,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ConstructorDeclaratorContext extends ParserRuleContext {
 		public SimpleTypeNameContext simpleTypeName() {
 			return getRuleContext(SimpleTypeNameContext.class, 0);
@@ -6728,6 +6817,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class SimpleTypeNameContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -6774,6 +6864,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ConstructorBodyContext extends ParserRuleContext {
 		public ExplicitConstructorInvocationContext explicitConstructorInvocation() {
 			return getRuleContext(ExplicitConstructorInvocationContext.class, 0);
@@ -6857,6 +6948,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ExplicitConstructorInvocationContext extends ParserRuleContext {
 		public TypeArgumentsContext typeArguments() {
 			return getRuleContext(TypeArgumentsContext.class, 0);
@@ -7079,6 +7171,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class EnumDeclarationContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -7171,6 +7264,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class EnumBodyContext extends ParserRuleContext {
 		public EnumConstantListContext enumConstantList() {
 			return getRuleContext(EnumConstantListContext.class, 0);
@@ -7254,6 +7348,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class EnumConstantListContext extends ParserRuleContext {
 		public List<EnumConstantContext> enumConstant() {
 			return getRuleContexts(EnumConstantContext.class);
@@ -7323,6 +7418,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class EnumConstantContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -7440,6 +7536,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class EnumConstantModifierContext extends ParserRuleContext {
 		public AnnotationContext annotation() {
 			return getRuleContext(AnnotationContext.class, 0);
@@ -7486,6 +7583,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class EnumBodyDeclarationsContext extends ParserRuleContext {
 		public List<ClassBodyDeclarationContext> classBodyDeclaration() {
 			return getRuleContexts(ClassBodyDeclarationContext.class);
@@ -7558,6 +7656,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class InterfaceDeclarationContext extends ParserRuleContext {
 		public NormalInterfaceDeclarationContext normalInterfaceDeclaration() {
 			return getRuleContext(NormalInterfaceDeclarationContext.class, 0);
@@ -7619,6 +7718,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class NormalInterfaceDeclarationContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -7725,6 +7825,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class InterfaceModifierContext extends ParserRuleContext {
 		public AnnotationContext annotation() {
 			return getRuleContext(AnnotationContext.class, 0);
@@ -7814,6 +7915,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ExtendsInterfacesContext extends ParserRuleContext {
 		public InterfaceTypeListContext interfaceTypeList() {
 			return getRuleContext(InterfaceTypeListContext.class, 0);
@@ -7862,6 +7964,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class InterfaceBodyContext extends ParserRuleContext {
 		public List<InterfaceMemberDeclarationContext> interfaceMemberDeclaration() {
 			return getRuleContexts(InterfaceMemberDeclarationContext.class);
@@ -7935,6 +8038,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class InterfaceMemberDeclarationContext extends ParserRuleContext {
 		public ConstantDeclarationContext constantDeclaration() {
 			return getRuleContext(ConstantDeclarationContext.class, 0);
@@ -8022,6 +8126,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ConstantDeclarationContext extends ParserRuleContext {
 		public UnannTypeContext unannType() {
 			return getRuleContext(UnannTypeContext.class, 0);
@@ -8100,6 +8205,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ConstantModifierContext extends ParserRuleContext {
 		public AnnotationContext annotation() {
 			return getRuleContext(AnnotationContext.class, 0);
@@ -8171,6 +8277,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class InterfaceMethodDeclarationContext extends ParserRuleContext {
 		public MethodHeaderContext methodHeader() {
 			return getRuleContext(MethodHeaderContext.class, 0);
@@ -8247,6 +8354,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class InterfaceMethodModifierContext extends ParserRuleContext {
 		public AnnotationContext annotation() {
 			return getRuleContext(AnnotationContext.class, 0);
@@ -8330,6 +8438,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class AnnotationTypeDeclarationContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -8411,6 +8520,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class AnnotationTypeBodyContext extends ParserRuleContext {
 		public List<AnnotationTypeMemberDeclarationContext> annotationTypeMemberDeclaration() {
 			return getRuleContexts(AnnotationTypeMemberDeclarationContext.class);
@@ -8482,6 +8592,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class AnnotationTypeMemberDeclarationContext extends ParserRuleContext {
 		public AnnotationTypeElementDeclarationContext annotationTypeElementDeclaration() {
 			return getRuleContext(AnnotationTypeElementDeclarationContext.class, 0);
@@ -8569,6 +8680,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class AnnotationTypeElementDeclarationContext extends ParserRuleContext {
 		public UnannTypeContext unannType() {
 			return getRuleContext(UnannTypeContext.class, 0);
@@ -8680,6 +8792,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class AnnotationTypeElementModifierContext extends ParserRuleContext {
 		public AnnotationContext annotation() {
 			return getRuleContext(AnnotationContext.class, 0);
@@ -8745,6 +8858,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class DefaultValueContext extends ParserRuleContext {
 		public ElementValueContext elementValue() {
 			return getRuleContext(ElementValueContext.class, 0);
@@ -8793,6 +8907,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class AnnotationContext extends ParserRuleContext {
 		public NormalAnnotationContext normalAnnotation() {
 			return getRuleContext(NormalAnnotationContext.class, 0);
@@ -8864,6 +8979,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class NormalAnnotationContext extends ParserRuleContext {
 		public TypeNameContext typeName() {
 			return getRuleContext(TypeNameContext.class, 0);
@@ -8931,6 +9047,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ElementValuePairListContext extends ParserRuleContext {
 		public List<ElementValuePairContext> elementValuePair() {
 			return getRuleContexts(ElementValuePairContext.class);
@@ -8998,6 +9115,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ElementValuePairContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -9052,6 +9170,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ElementValueContext extends ParserRuleContext {
 		public ConditionalExpressionContext conditionalExpression() {
 			return getRuleContext(ConditionalExpressionContext.class, 0);
@@ -9123,6 +9242,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ElementValueArrayInitializerContext extends ParserRuleContext {
 		public ElementValueListContext elementValueList() {
 			return getRuleContext(ElementValueListContext.class, 0);
@@ -9199,6 +9319,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ElementValueListContext extends ParserRuleContext {
 		public List<ElementValueContext> elementValue() {
 			return getRuleContexts(ElementValueContext.class);
@@ -9268,6 +9389,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class MarkerAnnotationContext extends ParserRuleContext {
 		public TypeNameContext typeName() {
 			return getRuleContext(TypeNameContext.class, 0);
@@ -9316,6 +9438,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class SingleElementAnnotationContext extends ParserRuleContext {
 		public TypeNameContext typeName() {
 			return getRuleContext(TypeNameContext.class, 0);
@@ -9374,6 +9497,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ArrayInitializerContext extends ParserRuleContext {
 		public VariableInitializerListContext variableInitializerList() {
 			return getRuleContext(VariableInitializerListContext.class, 0);
@@ -9450,6 +9574,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class VariableInitializerListContext extends ParserRuleContext {
 		public List<VariableInitializerContext> variableInitializer() {
 			return getRuleContexts(VariableInitializerContext.class);
@@ -9519,6 +9644,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class BlockContext extends ParserRuleContext {
 		public BlockStatementsContext blockStatements() {
 			return getRuleContext(BlockStatementsContext.class, 0);
@@ -9589,6 +9715,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class BlockStatementsContext extends ParserRuleContext {
 		public List<BlockStatementContext> blockStatement() {
 			return getRuleContexts(BlockStatementContext.class);
@@ -9663,6 +9790,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class BlockStatementContext extends ParserRuleContext {
 		public LocalVariableDeclarationStatementContext localVariableDeclarationStatement() {
 			return getRuleContext(LocalVariableDeclarationStatementContext.class, 0);
@@ -9734,6 +9862,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class LocalVariableDeclarationStatementContext extends ParserRuleContext {
 		public LocalVariableDeclarationContext localVariableDeclaration() {
 			return getRuleContext(LocalVariableDeclarationContext.class, 0);
@@ -9784,6 +9913,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class LocalVariableDeclarationContext extends ParserRuleContext {
 		public UnannTypeContext unannType() {
 			return getRuleContext(UnannTypeContext.class, 0);
@@ -9859,6 +9989,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class StatementContext extends ParserRuleContext {
 		public StatementWithoutTrailingSubstatementContext statementWithoutTrailingSubstatement() {
 			return getRuleContext(StatementWithoutTrailingSubstatementContext.class, 0);
@@ -9960,6 +10091,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class StatementNoShortIfContext extends ParserRuleContext {
 		public StatementWithoutTrailingSubstatementContext statementWithoutTrailingSubstatement() {
 			return getRuleContext(StatementWithoutTrailingSubstatementContext.class, 0);
@@ -10051,6 +10183,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class StatementWithoutTrailingSubstatementContext extends ParserRuleContext {
 		public BlockContext block() {
 			return getRuleContext(BlockContext.class, 0);
@@ -10238,6 +10371,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class EmptyStatementContext extends ParserRuleContext {
 		public EmptyStatementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -10280,6 +10414,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class LabeledStatementContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -10334,6 +10469,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class LabeledStatementNoShortIfContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -10388,6 +10524,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ExpressionStatementContext extends ParserRuleContext {
 		public StatementExpressionContext statementExpression() {
 			return getRuleContext(StatementExpressionContext.class, 0);
@@ -10436,6 +10573,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class StatementExpressionContext extends ParserRuleContext {
 		public AssignmentContext assignment() {
 			return getRuleContext(AssignmentContext.class, 0);
@@ -10547,6 +10685,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class IfThenStatementContext extends ParserRuleContext {
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class, 0);
@@ -10605,6 +10744,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class IfThenElseStatementContext extends ParserRuleContext {
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class, 0);
@@ -10671,6 +10811,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class IfThenElseStatementNoShortIfContext extends ParserRuleContext {
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class, 0);
@@ -10737,6 +10878,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class AssertStatementContext extends ParserRuleContext {
 		public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
@@ -10810,6 +10952,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class SwitchStatementContext extends ParserRuleContext {
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class, 0);
@@ -10868,6 +11011,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class SwitchBlockContext extends ParserRuleContext {
 		public List<SwitchBlockStatementGroupContext> switchBlockStatementGroup() {
 			return getRuleContexts(SwitchBlockStatementGroupContext.class);
@@ -10960,6 +11104,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class SwitchBlockStatementGroupContext extends ParserRuleContext {
 		public SwitchLabelsContext switchLabels() {
 			return getRuleContext(SwitchLabelsContext.class, 0);
@@ -11012,6 +11157,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class SwitchLabelsContext extends ParserRuleContext {
 		public List<SwitchLabelContext> switchLabel() {
 			return getRuleContexts(SwitchLabelContext.class);
@@ -11077,6 +11223,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class SwitchLabelContext extends ParserRuleContext {
 		public ConstantExpressionContext constantExpression() {
 			return getRuleContext(ConstantExpressionContext.class, 0);
@@ -11154,6 +11301,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class EnumConstantNameContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -11200,6 +11348,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class WhileStatementContext extends ParserRuleContext {
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class, 0);
@@ -11258,6 +11407,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class WhileStatementNoShortIfContext extends ParserRuleContext {
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class, 0);
@@ -11316,6 +11466,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class DoStatementContext extends ParserRuleContext {
 		public StatementContext statement() {
 			return getRuleContext(StatementContext.class, 0);
@@ -11378,6 +11529,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ForStatementContext extends ParserRuleContext {
 		public BasicForStatementContext basicForStatement() {
 			return getRuleContext(BasicForStatementContext.class, 0);
@@ -11439,6 +11591,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ForStatementNoShortIfContext extends ParserRuleContext {
 		public BasicForStatementNoShortIfContext basicForStatementNoShortIf() {
 			return getRuleContext(BasicForStatementNoShortIfContext.class, 0);
@@ -11500,6 +11653,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class BasicForStatementContext extends ParserRuleContext {
 		public StatementContext statement() {
 			return getRuleContext(StatementContext.class, 0);
@@ -11618,6 +11772,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class BasicForStatementNoShortIfContext extends ParserRuleContext {
 		public StatementNoShortIfContext statementNoShortIf() {
 			return getRuleContext(StatementNoShortIfContext.class, 0);
@@ -11736,6 +11891,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ForInitContext extends ParserRuleContext {
 		public StatementExpressionListContext statementExpressionList() {
 			return getRuleContext(StatementExpressionListContext.class, 0);
@@ -11797,6 +11953,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ForUpdateContext extends ParserRuleContext {
 		public StatementExpressionListContext statementExpressionList() {
 			return getRuleContext(StatementExpressionListContext.class, 0);
@@ -11843,6 +12000,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class StatementExpressionListContext extends ParserRuleContext {
 		public List<StatementExpressionContext> statementExpression() {
 			return getRuleContexts(StatementExpressionContext.class);
@@ -11910,6 +12068,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class EnhancedForStatementContext extends ParserRuleContext {
 		public UnannTypeContext unannType() {
 			return getRuleContext(UnannTypeContext.class, 0);
@@ -12005,6 +12164,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class EnhancedForStatementNoShortIfContext extends ParserRuleContext {
 		public UnannTypeContext unannType() {
 			return getRuleContext(UnannTypeContext.class, 0);
@@ -12100,6 +12260,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class BreakStatementContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -12159,6 +12320,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ContinueStatementContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -12218,6 +12380,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ReturnStatementContext extends ParserRuleContext {
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class, 0);
@@ -12284,6 +12447,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ThrowStatementContext extends ParserRuleContext {
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class, 0);
@@ -12334,6 +12498,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class SynchronizedStatementContext extends ParserRuleContext {
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class, 0);
@@ -12392,6 +12557,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class TryStatementContext extends ParserRuleContext {
 		public BlockContext block() {
 			return getRuleContext(BlockContext.class, 0);
@@ -12486,6 +12652,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class CatchesContext extends ParserRuleContext {
 		public List<CatchClauseContext> catchClause() {
 			return getRuleContexts(CatchClauseContext.class);
@@ -12551,6 +12718,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class CatchClauseContext extends ParserRuleContext {
 		public CatchFormalParameterContext catchFormalParameter() {
 			return getRuleContext(CatchFormalParameterContext.class, 0);
@@ -12609,6 +12777,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class CatchFormalParameterContext extends ParserRuleContext {
 		public CatchTypeContext catchType() {
 			return getRuleContext(CatchTypeContext.class, 0);
@@ -12684,6 +12853,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class CatchTypeContext extends ParserRuleContext {
 		public UnannClassTypeContext unannClassType() {
 			return getRuleContext(UnannClassTypeContext.class, 0);
@@ -12755,6 +12925,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class Finally_Context extends ParserRuleContext {
 		public BlockContext block() {
 			return getRuleContext(BlockContext.class, 0);
@@ -12803,6 +12974,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class TryWithResourcesStatementContext extends ParserRuleContext {
 		public ResourceSpecificationContext resourceSpecification() {
 			return getRuleContext(ResourceSpecificationContext.class, 0);
@@ -12886,6 +13058,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ResourceSpecificationContext extends ParserRuleContext {
 		public ResourceListContext resourceList() {
 			return getRuleContext(ResourceListContext.class, 0);
@@ -12947,6 +13120,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ResourceListContext extends ParserRuleContext {
 		public List<ResourceContext> resource() {
 			return getRuleContexts(ResourceContext.class);
@@ -13016,6 +13190,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ResourceContext extends ParserRuleContext {
 		public UnannTypeContext unannType() {
 			return getRuleContext(UnannTypeContext.class, 0);
@@ -13099,6 +13274,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class PrimaryContext extends ParserRuleContext {
 		public PrimaryNoNewArray_lfno_primaryContext primaryNoNewArray_lfno_primary() {
 			return getRuleContext(PrimaryNoNewArray_lfno_primaryContext.class, 0);
@@ -13186,6 +13362,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class PrimaryNoNewArrayContext extends ParserRuleContext {
 		public LiteralContext literal() {
 			return getRuleContext(LiteralContext.class, 0);
@@ -13358,6 +13535,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class PrimaryNoNewArray_lf_arrayAccessContext extends ParserRuleContext {
 		public PrimaryNoNewArray_lf_arrayAccessContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -13400,6 +13578,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class PrimaryNoNewArray_lfno_arrayAccessContext extends ParserRuleContext {
 		public LiteralContext literal() {
 			return getRuleContext(LiteralContext.class, 0);
@@ -13564,6 +13743,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class PrimaryNoNewArray_lf_primaryContext extends ParserRuleContext {
 		public ClassInstanceCreationExpression_lf_primaryContext classInstanceCreationExpression_lf_primary() {
 			return getRuleContext(ClassInstanceCreationExpression_lf_primaryContext.class, 0);
@@ -13655,6 +13835,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class PrimaryNoNewArray_lf_primary_lf_arrayAccess_lf_primaryContext extends ParserRuleContext {
 		public PrimaryNoNewArray_lf_primary_lf_arrayAccess_lf_primaryContext(ParserRuleContext parent,
 				int invokingState) {
@@ -13698,6 +13879,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class PrimaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primaryContext extends ParserRuleContext {
 		public ClassInstanceCreationExpression_lf_primaryContext classInstanceCreationExpression_lf_primary() {
 			return getRuleContext(ClassInstanceCreationExpression_lf_primaryContext.class, 0);
@@ -13782,6 +13964,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class PrimaryNoNewArray_lfno_primaryContext extends ParserRuleContext {
 		public LiteralContext literal() {
 			return getRuleContext(LiteralContext.class, 0);
@@ -13984,6 +14167,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class PrimaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primaryContext extends ParserRuleContext {
 		public PrimaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primaryContext(ParserRuleContext parent,
 				int invokingState) {
@@ -14027,6 +14211,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class PrimaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primaryContext extends ParserRuleContext {
 		public LiteralContext literal() {
 			return getRuleContext(LiteralContext.class, 0);
@@ -14222,6 +14407,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ClassInstanceCreationExpressionContext extends ParserRuleContext {
 		public List<TerminalNode> Identifier() {
 			return getTokens(Java8Parser.Identifier);
@@ -14561,6 +14747,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ClassInstanceCreationExpression_lf_primaryContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -14702,6 +14889,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ClassInstanceCreationExpression_lfno_primaryContext extends ParserRuleContext {
 		public List<TerminalNode> Identifier() {
 			return getTokens(Java8Parser.Identifier);
@@ -14962,6 +15150,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class TypeArgumentsOrDiamondContext extends ParserRuleContext {
 		public TypeArgumentsContext typeArguments() {
 			return getRuleContext(TypeArgumentsContext.class, 0);
@@ -15021,6 +15210,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class FieldAccessContext extends ParserRuleContext {
 		public PrimaryContext primary() {
 			return getRuleContext(PrimaryContext.class, 0);
@@ -15108,6 +15298,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class FieldAccess_lf_primaryContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -15156,6 +15347,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class FieldAccess_lfno_primaryContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -15231,6 +15423,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ArrayAccessContext extends ParserRuleContext {
 		public ExpressionNameContext expressionName() {
 			return getRuleContext(ExpressionNameContext.class, 0);
@@ -15342,6 +15535,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ArrayAccess_lf_primaryContext extends ParserRuleContext {
 		public PrimaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primaryContext primaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primary() {
 			return getRuleContext(PrimaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primaryContext.class, 0);
@@ -15436,6 +15630,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ArrayAccess_lfno_primaryContext extends ParserRuleContext {
 		public ExpressionNameContext expressionName() {
 			return getRuleContext(ExpressionNameContext.class, 0);
@@ -15550,6 +15745,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class MethodInvocationContext extends ParserRuleContext {
 		public MethodNameContext methodName() {
 			return getRuleContext(MethodNameContext.class, 0);
@@ -15856,6 +16052,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class MethodInvocation_lf_primaryContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -15944,6 +16141,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class MethodInvocation_lfno_primaryContext extends ParserRuleContext {
 		public MethodNameContext methodName() {
 			return getRuleContext(MethodNameContext.class, 0);
@@ -16205,6 +16403,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ArgumentListContext extends ParserRuleContext {
 		public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
@@ -16272,6 +16471,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class MethodReferenceContext extends ParserRuleContext {
 		public ExpressionNameContext expressionName() {
 			return getRuleContext(ExpressionNameContext.class, 0);
@@ -16480,6 +16680,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class MethodReference_lf_primaryContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -16543,6 +16744,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class MethodReference_lfno_primaryContext extends ParserRuleContext {
 		public ExpressionNameContext expressionName() {
 			return getRuleContext(ExpressionNameContext.class, 0);
@@ -16727,6 +16929,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ArrayCreationExpressionContext extends ParserRuleContext {
 		public PrimitiveTypeContext primitiveType() {
 			return getRuleContext(PrimitiveTypeContext.class, 0);
@@ -16850,6 +17053,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class DimExprsContext extends ParserRuleContext {
 		public List<DimExprContext> dimExpr() {
 			return getRuleContexts(DimExprContext.class);
@@ -16917,6 +17121,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class DimExprContext extends ParserRuleContext {
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class, 0);
@@ -16990,6 +17195,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ConstantExpressionContext extends ParserRuleContext {
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class, 0);
@@ -17036,6 +17242,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ExpressionContext extends ParserRuleContext {
 		public LambdaExpressionContext lambdaExpression() {
 			return getRuleContext(LambdaExpressionContext.class, 0);
@@ -17097,6 +17304,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class LambdaExpressionContext extends ParserRuleContext {
 		public LambdaParametersContext lambdaParameters() {
 			return getRuleContext(LambdaParametersContext.class, 0);
@@ -17151,6 +17359,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class LambdaParametersContext extends ParserRuleContext {
 		public TerminalNode Identifier() {
 			return getToken(Java8Parser.Identifier, 0);
@@ -17242,6 +17451,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class InferredFormalParameterListContext extends ParserRuleContext {
 		public List<TerminalNode> Identifier() {
 			return getTokens(Java8Parser.Identifier);
@@ -17309,6 +17519,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class LambdaBodyContext extends ParserRuleContext {
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class, 0);
@@ -17398,6 +17609,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class AssignmentExpressionContext extends ParserRuleContext {
 		public ConditionalExpressionContext conditionalExpression() {
 			return getRuleContext(ConditionalExpressionContext.class, 0);
@@ -17459,6 +17671,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class AssignmentContext extends ParserRuleContext {
 		public LeftHandSideContext leftHandSide() {
 			return getRuleContext(LeftHandSideContext.class, 0);
@@ -17517,6 +17730,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class LeftHandSideContext extends ParserRuleContext {
 		public ExpressionNameContext expressionName() {
 			return getRuleContext(ExpressionNameContext.class, 0);
@@ -17588,6 +17802,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class AssignmentOperatorContext extends ParserRuleContext {
 		public AssignmentOperatorContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -17643,6 +17858,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ConditionalExpressionContext extends ParserRuleContext {
 		public ConditionalOrExpressionContext conditionalOrExpression() {
 			return getRuleContext(ConditionalOrExpressionContext.class, 0);
@@ -17716,6 +17932,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ConditionalOrExpressionContext extends ParserRuleContext {
 		public ConditionalAndExpressionContext conditionalAndExpression() {
 			return getRuleContext(ConditionalAndExpressionContext.class, 0);
@@ -17804,6 +18021,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ConditionalAndExpressionContext extends ParserRuleContext {
 		public InclusiveOrExpressionContext inclusiveOrExpression() {
 			return getRuleContext(InclusiveOrExpressionContext.class, 0);
@@ -17892,6 +18110,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class InclusiveOrExpressionContext extends ParserRuleContext {
 		public ExclusiveOrExpressionContext exclusiveOrExpression() {
 			return getRuleContext(ExclusiveOrExpressionContext.class, 0);
@@ -17980,6 +18199,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ExclusiveOrExpressionContext extends ParserRuleContext {
 		public AndExpressionContext andExpression() {
 			return getRuleContext(AndExpressionContext.class, 0);
@@ -18068,6 +18288,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class AndExpressionContext extends ParserRuleContext {
 		public EqualityExpressionContext equalityExpression() {
 			return getRuleContext(EqualityExpressionContext.class, 0);
@@ -18156,6 +18377,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class EqualityExpressionContext extends ParserRuleContext {
 		public RelationalExpressionContext relationalExpression() {
 			return getRuleContext(RelationalExpressionContext.class, 0);
@@ -18261,6 +18483,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class RelationalExpressionContext extends ParserRuleContext {
 		public ShiftExpressionContext shiftExpression() {
 			return getRuleContext(ShiftExpressionContext.class, 0);
@@ -18406,6 +18629,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class ShiftExpressionContext extends ParserRuleContext {
 		public AdditiveExpressionContext additiveExpression() {
 			return getRuleContext(AdditiveExpressionContext.class, 0);
@@ -18531,6 +18755,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class AdditiveExpressionContext extends ParserRuleContext {
 		public MultiplicativeExpressionContext multiplicativeExpression() {
 			return getRuleContext(MultiplicativeExpressionContext.class, 0);
@@ -18636,6 +18861,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class MultiplicativeExpressionContext extends ParserRuleContext {
 		public UnaryExpressionContext unaryExpression() {
 			return getRuleContext(UnaryExpressionContext.class, 0);
@@ -18753,6 +18979,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class UnaryExpressionContext extends ParserRuleContext {
 		public PreIncrementExpressionContext preIncrementExpression() {
 			return getRuleContext(PreIncrementExpressionContext.class, 0);
@@ -18868,6 +19095,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class PreIncrementExpressionContext extends ParserRuleContext {
 		public UnaryExpressionContext unaryExpression() {
 			return getRuleContext(UnaryExpressionContext.class, 0);
@@ -18916,6 +19144,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class PreDecrementExpressionContext extends ParserRuleContext {
 		public UnaryExpressionContext unaryExpression() {
 			return getRuleContext(UnaryExpressionContext.class, 0);
@@ -18964,6 +19193,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class UnaryExpressionNotPlusMinusContext extends ParserRuleContext {
 		public PostfixExpressionContext postfixExpression() {
 			return getRuleContext(PostfixExpressionContext.class, 0);
@@ -19045,6 +19275,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class PostfixExpressionContext extends ParserRuleContext {
 		public PrimaryContext primary() {
 			return getRuleContext(PrimaryContext.class, 0);
@@ -19152,6 +19383,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class PostIncrementExpressionContext extends ParserRuleContext {
 		public PostfixExpressionContext postfixExpression() {
 			return getRuleContext(PostfixExpressionContext.class, 0);
@@ -19200,6 +19432,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class PostIncrementExpression_lf_postfixExpressionContext extends ParserRuleContext {
 		public PostIncrementExpression_lf_postfixExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -19244,6 +19477,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class PostDecrementExpressionContext extends ParserRuleContext {
 		public PostfixExpressionContext postfixExpression() {
 			return getRuleContext(PostfixExpressionContext.class, 0);
@@ -19292,6 +19526,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class PostDecrementExpression_lf_postfixExpressionContext extends ParserRuleContext {
 		public PostDecrementExpression_lf_postfixExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -19336,6 +19571,7 @@ public class Java8Parser extends Parser {
 		return _localctx;
 	}
 
+	@Generated
 	public static class CastExpressionContext extends ParserRuleContext {
 		public PrimitiveTypeContext primitiveType() {
 			return getRuleContext(PrimitiveTypeContext.class, 0);
