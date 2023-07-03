@@ -4,17 +4,23 @@ The hello world application can be build by:
 
 ``mvn clean install``
 
-Thereafter a docker container can be build by:
-
-``docker build --build-arg JAR_FILE=target/*.jar -t myorg/myapp .``
-
 To start the build docker container, type:
 
-``docker run -p 8080:8080 myorg/myapp``
+``docker run -p 8080:8080 hello-docker:0.0.1-SNAPSHOT``
 
 Some alternative options are explained with
 
 [Spring Boot Docker](https://spring.io/guides/topicals/spring-boot-docker/)
+
+The docker container is build by the ``com.spotify:dockerfile-maven-plugin`` automatically.
+
+Alternatively the docker container can be build by removing the plugin for the POM file and call
+
+``docker build --build-arg JAR_FILE=target/*.jar -t hello-docker .``
+
+manually. In this case the container could be started by typing:
+
+``docker run -p 8080:8080 hello-docker``
 
 ## Fun Facts
 
