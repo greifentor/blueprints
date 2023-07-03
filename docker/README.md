@@ -15,3 +15,15 @@ To start the build docker container, type:
 Some alternative options are explained with
 
 [Spring Boot Docker](https://spring.io/guides/topicals/spring-boot-docker/)
+
+## Fun Facts
+
+### Dockerfile Naming
+
+The docker file ``Dockerfile`` must be named so. Other naming leads to a not really self explaining error message:
+
+``ERROR: failed to solve: failed to read dockerfile: open /var/lib/docker/tmp/buildkit-mount1279854336/Dockerfile: no such file or directory``
+
+### Command Line Arguments
+
+Command line arguments of the ``docker run`` call are automatically passed to the started application.

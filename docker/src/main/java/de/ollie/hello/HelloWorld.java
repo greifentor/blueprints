@@ -3,7 +3,8 @@ package de.ollie.hello;
 public class HelloWorld {
 
 	public static void main(String[] args) {
-		System.out.println("\nHello, World!\n");
+		String name = args.length > 0 ? args[0] : "World";
+		System.out.println("\nHello, " + name + "!\n");
 	}
 
 }
